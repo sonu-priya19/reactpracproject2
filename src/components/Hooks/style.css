@@ -1,0 +1,131 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 40px;
+}
+
+.use-state-container {
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button2 {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: cyan;
+  font-weight: bold;
+  background: none;
+  border: 2px solid cyan; /* Default border */
+  cursor: pointer;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.button2 span {
+  position: absolute;
+  display: none; /* Hide spans by default */
+}
+
+/* On hover: remove default border and show animation */
+.button2:hover {
+  color: #00ffe5;
+  background: rgba(255, 255, 255, 0.05);
+  border: none; /* Remove the default border on hover */
+}
+
+.button2:hover span {
+  display: block; /* Show animated borders on hover */
+}
+
+.button2 span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, cyan);
+  animation: animate1 1s linear infinite;
+}
+
+.button2 span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, cyan);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+.button2 span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(270deg, transparent, cyan);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+.button2 span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, cyan);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 100%;
+  }
+}

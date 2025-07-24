@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+// import React from 'react';
+// //import UseState from './components/Hooks/UseState';
+//import UseState from './components/Hooks/UseEfffect';
+
+// function App() {
+//   return (
+//     <div className="App">
+//       {/*<UseState />*/}
+//       <UseEffect />
+//     </div>
+//   );
+// }
+
+// export default App;
+import React from 'react';
+import UseEffect from './components/Hooks/UseEfffect';
+ // ✅ Make sure the path is correct
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <UseEffect /> {/* ✅ Add the component */}
     </div>
   );
 }
