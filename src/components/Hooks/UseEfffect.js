@@ -6,9 +6,9 @@ const UseEffect = () => {
 
   // Just a sample useEffect logic (optional)
   useEffect(() => {
-    console.log("Count changed:", count);
-  }, [count]);
-
+    document.title = `chats(${count})`;
+  }
+  );
   return (
     <div className="use-state-container">
       <h1>Counter: {count}</h1>
